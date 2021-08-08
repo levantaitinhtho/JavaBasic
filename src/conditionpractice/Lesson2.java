@@ -11,8 +11,11 @@ public class Lesson2 {
     public static void checkMaxValue(int a, int b) {
         if (a > b) {
             System.out.println("MaxValue ="+a);
-        } else {
+        } else if(a<b) {
             System.out.println("MaxValue= "+b);
+        }
+        else{
+            System.out.println("two equal numbers");
         }
     }
 

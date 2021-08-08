@@ -23,6 +23,8 @@ import java.util.Scanner;
              case 2:
                  System.out.println("Là tháng có 28 hoặc 29 ngày");
                  break;
+             default:
+                 System.out.println("Erorr");
          }
      }
 }
