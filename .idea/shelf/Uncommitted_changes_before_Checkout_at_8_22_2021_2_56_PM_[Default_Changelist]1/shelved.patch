@@ -1,0 +1,370 @@
+Index: src/employeemanagement/EmployeeManagement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package employeemanagement;\r\nimport java.util.ArrayList;\r\nimport java.util.Scanner;\r\npublic class EmployeeManagement {\r\n    public static void main(String[] args) {\r\n        ArrayList<Employee> employeeList = new ArrayList<>();\r\n        ArrayList<Officer> officerList = new ArrayList<>();\r\n        int choose;\r\n        do {\r\n            Scanner input = new Scanner(System.in);\r\n            showMenu();\r\n            System.out.println(\"Enter Choose Of You: \");\r\n            choose = Integer.parseInt(input.nextLine());\r\n            switch (choose){\r\n                case 1:\r\n                    int n;\r\n                    System.out.println(\"Enter Number Employee Need Add\");\r\n                    n = Integer.parseInt(input.nextLine());\r\n                    for (int i=0;i<n;i++){\r\n                        Employee E = new Employee();\r\n                        E.inputEmployee();\r\n\r\n                        employeeList.add(E);\r\n                    }\r\n                    break;\r\n                case 2:\r\n                    System.out.println(\"Enter ID Employee Need Delete: \");\r\n                    String inputName = input.nextLine();\r\n                    int count =0;\r\n                    for(Employee employee : employeeList){\r\n                        if(employeeList.contains(inputName)){\r\n                            employeeList.remove(inputName);\r\n                            count++;\r\n                        }\r\n                    }\r\n                    if(count ==0){\r\n                        System.out.println(\"Not Found Name Employee\");\r\n                    }\r\n\r\n                    break;\r\n                case 3:\r\n                    System.out.println(\"Enter Name Need Found: \");\r\n                    String NameFake = input.nextLine();\r\n                    int dem =0;\r\n                    for(Employee employee : employeeList){\r\n                        if(employee.getName().equalsIgnoreCase(NameFake)){\r\n                            employee.showInfo();\r\n                            dem++;\r\n                        }\r\n                    }\r\n                    if(dem==0){\r\n                        System.out.println(\"Not Found Name \");\r\n                    }\r\n                    break;\r\n                case 4:\r\n                    int m;\r\n                    System.out.println(\"Enter Number Officer Need Add\");\r\n                    m = Integer.parseInt(input.nextLine());\r\n                    for(int i=0;i<m;i++){\r\n                        Officer O = new Officer();\r\n                            O.inputInfo();\r\n\r\n                            officerList.add(O);\r\n                    }\r\n                    break;\r\n                case 5:\r\n                    for(int i=0;i<officerList.size();i++){\r\n                        officerList.get(i).showInfo();\r\n                    }\r\n                    break;\r\n                case 6:\r\n                    for(int i=0;i<employeeList.size();i++){\r\n                        employeeList.get(i).showInfo();\r\n                    }\r\n                    break;\r\n                case 7:\r\n                    System.out.println(\"GoodBye ~~~\");\r\n                    break;\r\n                default:\r\n                    System.err.println(\"Enter Again\");\r\n            }\r\n\r\n        }while (choose != 7);\r\n\r\n    }\r\n    static void showMenu(){\r\n        System.out.println(\"1.Thêm thông tin Employeee\");\r\n        System.out.println(\"2.Xóa thông tin Employeee theo ID\");\r\n        System.out.println(\"3.Tìm kiếm theo họ tên của Employee\");\r\n        System.out.println(\"4.Nhập vào thông tin dành cho Offcier\");\r\n        System.out.println(\"5.Hiển thị tất cả các Officer\");\r\n        System.out.println(\"6.Hiển thị thông tin tất cả Employee\");\r\n        System.out.println(\"7.Thoát ~~~\");\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/employeemanagement/EmployeeManagement.java b/src/employeemanagement/EmployeeManagement.java
+--- a/src/employeemanagement/EmployeeManagement.java	(revision 86a718cfd41d54e94980cb0625bec1fef1864173)
++++ b/src/employeemanagement/EmployeeManagement.java	(date 1629618984756)
+@@ -28,8 +28,8 @@
+                     String inputName = input.nextLine();
+                     int count =0;
+                     for(Employee employee : employeeList){
+-                        if(employeeList.contains(inputName)){
+-                            employeeList.remove(inputName);
++                        if(employee.getName().equals(inputName)){
++                            employeeList.remove(employee);
+                             count++;
+                         }
+                     }
+Index: src/employeemanagement/Officer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package employeemanagement;\r\nimport java.util.Scanner;\r\npublic class Officer {\r\n    private int level;\r\n    private String department;\r\n\r\n    public Officer() {\r\n    }\r\n\r\n    public Officer(int level, String department) {\r\n        this.level = level;\r\n        this.department = department;\r\n    }\r\n\r\n    public int getLevel() {\r\n        return level;\r\n    }\r\n\r\n    public void setLevel(int level) {\r\n        this.level = level;\r\n    }\r\n\r\n    public String getDepartment() {\r\n        return department;\r\n    }\r\n\r\n    public void setDepartment(String department) {\r\n        this.department = department;\r\n    }\r\n\r\n    public void inputInfo(){\r\n        Scanner input = new Scanner (System.in);\r\n        System.out.println(\"Enter Level: \");\r\n        level = Integer.parseInt(input.nextLine());\r\n        System.out.println(\"Enter Department: \");\r\n        department = input.nextLine();\r\n    }\r\n    public void showInfo(){\r\n        System.out.println(toString());\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Officer{\" +\r\n                \"level=\" + level +\r\n                \", department='\" + department + '\\'' +\r\n                '}';\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/employeemanagement/Officer.java b/src/employeemanagement/Officer.java
+--- a/src/employeemanagement/Officer.java	(revision 86a718cfd41d54e94980cb0625bec1fef1864173)
++++ b/src/employeemanagement/Officer.java	(date 1629618984764)
+@@ -1,6 +1,6 @@
+ package employeemanagement;
+ import java.util.Scanner;
+-public class Officer {
++public class Officer extends Employee {
+     private int level;
+     private String department;
+ 
+Index: src/employeemanagement/Worker.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package employeemanagement;\r\nimport java.util.Scanner;\r\npublic class Worker {\r\n    private String factory;\r\n\r\n    public Worker() {\r\n    }\r\n\r\n    public Worker(String factory) {\r\n        this.factory = factory;\r\n    }\r\n\r\n    public String getFactory() {\r\n        return factory;\r\n    }\r\n\r\n    public void setFactory(String factory) {\r\n        this.factory = factory;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/employeemanagement/Worker.java b/src/employeemanagement/Worker.java
+--- a/src/employeemanagement/Worker.java	(revision 86a718cfd41d54e94980cb0625bec1fef1864173)
++++ b/src/employeemanagement/Worker.java	(date 1629618984766)
+@@ -1,6 +1,6 @@
+ package employeemanagement;
+ import java.util.Scanner;
+-public class Worker {
++public class Worker extends Employee {
+     private String factory;
+ 
+     public Worker() {
+Index: out/src/student/Student.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/src/student/Student.java b/out/src/student/Student.java
+new file mode 100644
+--- /dev/null	(date 1629618984815)
++++ b/out/src/student/Student.java	(date 1629618984815)
+@@ -0,0 +1,93 @@
++package student;
++import java.util.Scanner;
++public class Student {
++    private String name;
++    private String address;
++    private String email;
++    private String numberphone;
++    private String id;
++    private float fee;
++    public Student(){
++
++    }
++    public Student(String name, String address, String email, String numberphone, String id, float fee) {
++        this.name = name;
++        this.address = address;
++        this.email = email;
++        this.numberphone = numberphone;
++        this.id = id;
++        this.fee = fee;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public String getAddress() {
++        return address;
++    }
++
++    public void setAddress(String address) {
++        this.address = address;
++    }
++
++    public String getEmail() {
++        return email;
++    }
++
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
++    public String getNumberphone() {
++        return numberphone;
++    }
++
++    public void setNumberphone(String numberphone) {
++        this.numberphone = numberphone;
++    }
++
++    public String getId() {
++        return id;
++    }
++
++    public void setId(String id) {
++        this.id = id;
++    }
++
++    public float getFee() {
++        return fee;
++    }
++
++    public void setFee(float fee) {
++        this.fee = fee;
++    }
++
++    @Override
++    public String toString() {
++        return "Student{" +
++                "name='" + name + '\'' +
++                ", address='" + address + '\'' +
++                ", email='" + email + '\'' +
++                ", numberphone='" + numberphone + '\'' +
++                ", id='" + id + '\'' +
++                ", fee=" + fee +
++                '}';
++    }
++    void study(String subject ){
++        System.out.println(this.name+" is study "+subject);
++    }
++    void doExample(String subject){
++        System.out.println(this.name +" doing "+subject+" exam ");
++    }
++    void payFee(){
++        System.out.println("Fee of "+this.name+" is "+this.fee);
++    }
++    void doQuiz(String subject){
++        System.out.println(this.name+" doing quiz"+subject);
++    }
++}
+Index: out/src/student/Practise.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/src/student/Practise.java b/out/src/student/Practise.java
+new file mode 100644
+--- /dev/null	(date 1629618984815)
++++ b/out/src/student/Practise.java	(date 1629618984815)
+@@ -0,0 +1,70 @@
++package student;
++
++public class Practise {
++    private String id;
++    private String name;
++    private String birthday;
++    private String phonenumber;
++    private String gender;
++    public Practise(){
++
++    }
++
++    public Practise(String id, String name, String birthday, String phonenumber, String gender) {
++        this.id = id;
++        this.name = name;
++        this.birthday = birthday;
++        this.phonenumber = phonenumber;
++        this.gender = gender;
++    }
++
++    public String getId() {
++        return id;
++    }
++
++    public void setId(String id) {
++        this.id = id;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public String getBirdthday() {
++        return birthday;
++    }
++
++    public void setBirdthday(String birdthday) {
++        this.birthday = birdthday;
++    }
++
++    public String getPhonenumber() {
++        return phonenumber;
++    }
++
++    public void setPhonenumber(String phonenumber) {
++        this.phonenumber = phonenumber;
++    }
++
++    public String getGender() {
++        return gender;
++    }
++
++    public boolean setGender(String gender) {
++        if (gender == "Male" || gender == "Female") {
++            this.gender = gender;
++            return true;
++        } else {
++            System.err.println("Enter Again: ");
++            return false;
++        }
++
++    }
++    void doExample(String subject){
++        System.out.println(this.name+" doing homework "+subject+" yesterday");
++    }
++}
+\ No newline at end of file
+Index: src/Loop/EnumerateElement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Loop;\r\nimport java.util.Scanner;\r\npublic class EnumerateElement {\r\n    public static void main(String[] args) {\r\n        Scanner sc = new Scanner(System.in);\r\n        System.out.println(\"Enter n: \");\r\n        int n = sc.nextInt();\r\n        int dem=0;\r\n        int begin=2;\r\n        while(dem<n){\r\n            if(checkElement(begin)){\r\n                System.out.print(begin+\" \");\r\n                dem++;\r\n            }\r\n            begin++;\r\n        }\r\n    }\r\n    public static boolean checkElement(int n){\r\n        if(n<2){\r\n            return false;\r\n        }\r\n        else{\r\n            for(int i=2;i<Math.sqrt(n);i++){\r\n                if(n%i==0){\r\n                    return false;\r\n                }\r\n            }\r\n        }\r\n        return true;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Loop/EnumerateElement.java b/src/Loop/EnumerateElement.java
+--- a/src/Loop/EnumerateElement.java	(revision 86a718cfd41d54e94980cb0625bec1fef1864173)
++++ b/src/Loop/EnumerateElement.java	(date 1629618984777)
+@@ -20,7 +20,7 @@
+             return false;
+         }
+         else{
+-            for(int i=2;i<Math.sqrt(n);i++){
++            for(int i=2;i<=Math.sqrt(n);i++){
+                 if(n%i==0){
+                     return false;
+                 }
+Index: out/src/student/MainStudent.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/src/student/MainStudent.java b/out/src/student/MainStudent.java
+new file mode 100644
+--- /dev/null	(date 1629618984787)
++++ b/out/src/student/MainStudent.java	(date 1629618984787)
+@@ -0,0 +1,33 @@
++package student;
++import java.util.Scanner;
++public class MainStudent {
++    public static void main(String[] args) {
++        Student [] students = new Student[10];
++        students[0]=getStudentInfo();
++        System.out.println(students[0]);
++        students[0].study("Toan");
++        students[0].payFee();
++        students[0].doExample("Languages");
++    }
++    public static Student getStudentInfo(){
++        Student s = null;
++        String name,address,email,numberphone,id;
++        float fee;
++        Scanner sc= new Scanner(System.in);
++        System.out.println("ID: ");
++        id = sc.nextLine();
++        System.out.println("Full name: ");
++        name = sc.nextLine();
++        System.out.println("Address: ");
++        address = sc.nextLine();
++        System.out.println("Email: ");
++        email = sc.nextLine();
++        System.out.println("Number Phone: ");
++        numberphone = sc.nextLine();
++        System.out.println("Fee: ");
++        fee =  sc.nextFloat();
++
++        s = new Student(name,address,email,numberphone,id,fee);
++        return s;
++    }
++}
+Index: src/Loop/EnumerateFibonanci.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Loop;\r\nimport java.util.Scanner;\r\npublic class EnumerateFibonanci {\r\n    public static void main(String[] args) {\r\n        display();\r\n    }\r\n    public static long enumerateFibonaci(int n){\r\n        long f0=0 ,f1=1,fn=0;\r\n        if(n==0 || n==1){\r\n            fn=n;\r\n        }\r\n        else{\r\n            for(int i=2;i<=n;i++){\r\n                fn=f0+f1;\r\n                f0=f1;\r\n                f1=fn;\r\n            }\r\n        }\r\n        return fn;\r\n        }\r\n        public static void display(){\r\n        Scanner sc= new Scanner(System.in);\r\n            System.out.println(\"Enter n: \");\r\n        int n = sc.nextInt();\r\n        int count =0;\r\n        for(int i=0;i<n;i++){\r\n            System.out.println(\"fi\"+i+\"=\"+enumerateFibonaci(i));\r\n            count++;\r\n        }\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Loop/EnumerateFibonanci.java b/src/Loop/EnumerateFibonanci.java
+--- a/src/Loop/EnumerateFibonanci.java	(revision 86a718cfd41d54e94980cb0625bec1fef1864173)
++++ b/src/Loop/EnumerateFibonanci.java	(date 1629618984805)
+@@ -22,10 +22,8 @@
+         Scanner sc= new Scanner(System.in);
+             System.out.println("Enter n: ");
+         int n = sc.nextInt();
+-        int count =0;
+         for(int i=0;i<n;i++){
+             System.out.println("fi"+i+"="+enumerateFibonaci(i));
+-            count++;
+         }
+     }
+ }
+Index: out/src/student/MainPractise.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/src/student/MainPractise.java b/out/src/student/MainPractise.java
+new file mode 100644
+--- /dev/null	(date 1629618984795)
++++ b/out/src/student/MainPractise.java	(date 1629618984795)
+@@ -0,0 +1,34 @@
++package student;
++import java.util.Scanner;
++public class MainPractise {
++    public static void main(String[] args) {
++        Practise[] pr = new Practise[10];
++        pr[0] = display();
++        System.out.println(pr[0]);
++        pr[0].doExample("English");
++    }
++    public static Practise display(){
++        Practise pr = null;
++        Scanner sc= new Scanner(System.in);
++        String id,name,birthday,phonenumber,gender;
++        System.out.println("ID: ");
++        id = sc.nextLine();
++        System.out.println("Name is: ");
++        name = sc.nextLine();
++        System.out.println("Birthday: ");
++        birthday = sc.nextLine();
++        System.out.println("Phone Number");
++        phonenumber = sc.nextLine();
++        System.out.println("Gender: ");
++        while(true){
++            String markGender = sc.nextLine();
++            boolean check = pr.setGender(markGender);
++            if(check){
++                break;
++            }
++        }
++        pr = new Practise(id,name,birthday,phonenumber,gender);
++        return pr;
++    }
++}
++
+diff --git a/out/src/student/StudentTest.java b/out/src/student/StudentTest.java
+new file mode 100644

@@ -60,23 +60,6 @@ public class Student {
     public float calculateAverageScore(){
         return (getTheoryScore() - getPraticeScore())/2;
     }
-    public void getInfo(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("ID: ");
-        ID = Integer.parseInt(input.nextLine());
-        System.out.println("Name: ");
-        name = input.nextLine();
-        System.out.println("Major: ");
-        major = input.nextLine();
-        System.out.println("Theory Score: ");
-        theoryScore = input.nextFloat();
-        System.out.println("Pratice Score: ");
-        praticeScore = input.nextFloat();
-    }
-    public void showInfo(){
-        System.out.println(toString());
-        System.out.println("Calculate Average Score:"+calculateAverageScore());
-    }
 
     @Override
     public String toString() {
