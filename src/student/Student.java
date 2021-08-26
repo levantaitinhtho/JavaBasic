@@ -1,21 +1,21 @@
-package studentmanagement;
-import java.util.Scanner;
+package student;
+
 public class Student {
     private int ID;
     private String name;
     private String major;
     private float theoryScore;
-    private float praticeScore;
+    private float practiceScore;
 
     public Student() {
     }
 
-    public Student(int ID, String name, String major, float theoryScore, float praticeScore) {
+    public Student(int ID, String name, String major, float theoryScore, float practiceScore) {
         this.ID = ID;
         this.name = name;
         this.major = major;
         this.theoryScore = theoryScore;
-        this.praticeScore = praticeScore;
+        this.practiceScore = practiceScore;
     }
 
     public int getID() {
@@ -50,15 +50,16 @@ public class Student {
         this.theoryScore = theoryScore;
     }
 
-    public float getPraticeScore() {
-        return praticeScore;
+    public float getPracticeScore() {
+        return practiceScore;
     }
 
-    public void setPraticeScore(float praticeScore) {
-        this.praticeScore = praticeScore;
+    public void setPracticeScore(float practiceScore) {
+        this.practiceScore = practiceScore;
     }
-    public float calculateAverageScore(){
-        return (getTheoryScore() - getPraticeScore())/2;
+
+    public float  calcualteAverageScore(){
+        return (getPracticeScore()+getTheoryScore())/2;
     }
 
     @Override
@@ -68,7 +69,8 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", major='" + major + '\'' +
                 ", theoryScore=" + theoryScore +
-                ", praticeScore=" + praticeScore +
+                ", practiceScore=" + practiceScore +
+                ", calcualteAverageScore="+calcualteAverageScore()+
                 '}';
     }
 }

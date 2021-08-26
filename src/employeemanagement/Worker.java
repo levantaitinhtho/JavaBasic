@@ -1,6 +1,6 @@
 package employeemanagement;
 import java.util.Scanner;
-public class Worker {
+public class Worker extends Employee {
     private String factory;
 
     public Worker() {

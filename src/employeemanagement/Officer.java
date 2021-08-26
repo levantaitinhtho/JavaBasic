@@ -1,6 +1,6 @@
 package employeemanagement;
 import java.util.Scanner;
-public class Officer {
+public class Officer extends Employee {
     private int level;
     private String department;
 
@@ -29,7 +29,8 @@ public class Officer {
     }
 
     public void inputInfo(){
-        Scanner input = new Scanner (System.in);
+        Scanner input = new Scanner(System.in);
+        super.inputEmployee();
         System.out.println("Enter Level: ");
         level = Integer.parseInt(input.nextLine());
         System.out.println("Enter Department: ");

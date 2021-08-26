@@ -28,8 +28,8 @@ public class EmployeeManagement {
                     String inputName = input.nextLine();
                     int count =0;
                     for(Employee employee : employeeList){
-                        if(employeeList.contains(inputName)){
-                            employeeList.remove(inputName);
+                        if(employee.getName().equals(inputName)){
+                            employeeList.remove(employee);
                             count++;
                         }
                     }
@@ -85,7 +85,7 @@ public class EmployeeManagement {
     }
     static void showMenu(){
         System.out.println("1.Thêm thông tin Employeee");
-        System.out.println("2.Xóa thông tin Employeee theo ID");
+        System.out.println("2.Xóa thông tin Employeee theo Name");
         System.out.println("3.Tìm kiếm theo họ tên của Employee");
         System.out.println("4.Nhập vào thông tin dành cho Offcier");
         System.out.println("5.Hiển thị tất cả các Officer");
