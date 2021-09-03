@@ -8,6 +8,7 @@ package bankmanagement;
 //        + deleteAccount
 //        + searchAccount
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class AccountManagement {
@@ -16,20 +17,21 @@ public class AccountManagement {
     public ArrayList<Account> getList() {
         return accountList;
     }
-    public void addAccount(Account account) {
-        accountList.add(account);
-    }
-
+    public void addAccount(Account addAccount) {
+                accountList.add(addAccount);
+            }
     public void removeAccount(Account account) {
         accountList.remove(account);
     }
-
-    public Account searchByID(long ID) {
-        for (Account account: accountList) {
-           if( account.getID() == ID) {
-               return account;
-           }
+    public void updateAccount(Account updateAccount){
+        for(Account account : accountList){
+            if(account.getID() ==updateAccount.getID()){
+               account.setAccountName(updateAccount.getAccountName());
+            }
         }
-        return null;
+    }
+    public Account searchByID(long ID) {
+        return accountList.stream().filter(account ->
+                account.getID() == ID).findFirst().orElse(null);
     }
 }

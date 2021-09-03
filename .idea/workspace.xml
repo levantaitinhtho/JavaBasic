@@ -1,67 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a7044f3-9d5f-450f-b34e-d31a8b06d439" name="Default Changelist" comment="PRACTISE">
-      <change afterPath="$PROJECT_DIR$/out/out.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Arrays/Lesson1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Arrays/Lesson2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Loop/CupInterger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Loop/ElementNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Loop/ElementNumber2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Loop/EnumerateElement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Loop/EnumerateFibonanci.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Loop/Month.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Loop/Table.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Loop/Table2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Loop/Week.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Study/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Study/Point.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/Study/Time.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/conditionpractice/Leeson3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/conditionpractice/Lesson1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/conditionpractice/Lesson2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic/vn/viettuts/baitap/array/Option.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Arrays/Lesson1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Arrays/Lesson2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Loop/CupInterger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Loop/ElementNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Loop/ElementNumber2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Loop/EnumerateElement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Loop/EnumerateFibonanci.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Loop/Month.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Loop/Table.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Loop/Table2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Loop/Week.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Study/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Study/Point.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/Study/Time.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/conditionpractice/Leeson3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/conditionpractice/Lesson1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/conditionpractice/Lesson2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/employeemanagement/Employee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/employeemanagement/EmployeeManagement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/employeemanagement/Officer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/employeemanagement/Worker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/javabasic12/vn/viettuts/baitap/array/Option.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/src/student/MainPractise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/src/student/MainStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/src/student/Practise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/src/student/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/src/student/StudentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/StudentManagement.java" afterDir="false" />
+    <list default="true" id="7a7044f3-9d5f-450f-b34e-d31a8b06d439" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_22_2021_2_56_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_22_2021_2_56_PM_[Default_Changelist]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_22_2021_2_56_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_8_22_2021_2_56_PM__Default_Changelist_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javabasic12/studentmanagement/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javabasic12/studentmanagement/StudentManagement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Loop/EnumerateElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loop/EnumerateElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Loop/EnumerateFibonanci.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loop/EnumerateFibonanci.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employeemanagement/EmployeeManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employeemanagement/EmployeeManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employeemanagement/Officer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employeemanagement/Officer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/employeemanagement/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/employeemanagement/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/studentmanagement/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/studentmanagement/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/studentmanagement/StudentManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bankmanagement/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankmanagement/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bankmanagement/AccountManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankmanagement/AccountManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bankmanagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankmanagement/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/StudentManagement.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +52,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="EmployeeManagement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="employeemanagement.EmployeeManagement" />
       <module name="javabasic12" />
@@ -154,10 +105,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.EmployeeManagement" />
       </list>
@@ -182,6 +146,18 @@
       <workItem from="1629886531932" duration="13641000" />
       <workItem from="1629945743279" duration="6724000" />
       <workItem from="1629965177129" duration="7396000" />
+      <workItem from="1629983079536" duration="288000" />
+      <workItem from="1630160294217" duration="1179000" />
+      <workItem from="1630419430103" duration="2640000" />
+      <workItem from="1630457278187" duration="687000" />
+      <workItem from="1630486628511" duration="68000" />
+      <workItem from="1630499710402" duration="4868000" />
+      <workItem from="1630510515975" duration="1244000" />
+      <workItem from="1630577406452" duration="525000" />
+      <workItem from="1630578680061" duration="5314000" />
+      <workItem from="1630636497328" duration="5568000" />
+      <workItem from="1630642379971" duration="1616000" />
+      <workItem from="1630657049452" duration="992000" />
     </task>
     <task id="LOCAL-00001" summary="PRACTISE">
       <created>1629603045563</created>
@@ -204,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629900944400</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="PRACTISE">
+      <created>1629983103209</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629983103209</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,8 +206,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PRACTISE" />
     <MESSAGE value="StudentManagement" />
-    <option name="LAST_COMMIT_MESSAGE" value="StudentManagement" />
+    <MESSAGE value="PRACTISE" />
+    <option name="LAST_COMMIT_MESSAGE" value="PRACTISE" />
   </component>
 </project>

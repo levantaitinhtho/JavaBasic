@@ -12,6 +12,8 @@ package bankmanagement;
 //
 
 
+import java.util.Objects;
+
 public class Account {
     public static final float INTEREST = 0.035f;
 
@@ -26,6 +28,19 @@ public class Account {
     }
 
     public Account() {}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Account account = (Account) o;
+        return ID == account.ID;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ID);
+    }
 
     public Account(long ID, String accountName) {
         this.accountName = accountName;
@@ -77,6 +92,5 @@ public class Account {
     public String toString() {
         return "[ID: " + ID + ", accountName: "  + accountName + ", amount: " + amount + "]";
 
-        // [ID: 1, accountName: hauvu, amount: 10000000]
     }
 }
