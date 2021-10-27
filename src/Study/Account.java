@@ -1,5 +1,5 @@
 package Study;
-import com.sun.corba.se.impl.ior.ObjectAdapterIdNumber;
+
 
 import java.util.Scanner;
 import java.lang.String;

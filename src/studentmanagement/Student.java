@@ -58,7 +58,7 @@ public class Student {
         this.praticeScore = praticeScore;
     }
     public float calculateAverageScore(){
-        return (getTheoryScore() - getPraticeScore())/2;
+        return (getTheoryScore() + getPraticeScore())/2;
     }
     public void getInfo(){
         Scanner input = new Scanner(System.in);

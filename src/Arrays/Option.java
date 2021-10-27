@@ -1,4 +1,4 @@
-package vn.viettuts.baitap.array;
+package Arrays;
 
 import java.util.Scanner;
 public class Option {

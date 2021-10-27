@@ -8,7 +8,7 @@ public class Lesson1 {
         evenNumber(a);
     }
     public static int[] Enter() {
-        Scanner scanner = new Scanner(System.in); 
+        Scanner sc = new Scanner(System.in); 
         System.out.print("Enter Array Number: ");
         int n = sc.nextInt();
         int[] arr = new int[n];
